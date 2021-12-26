@@ -1,8 +1,14 @@
 name: My First Github Actions
 on: [push]
 jobs:
-  print-hello-world:
+  build-app:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World!"
-      - run: echo "Hello World Again!"
+      - uses: actions/checkout@v2 #cloning the repo
+      - uses: actions/setup-node@v2 #install node
+        with:
+          node-version: 14.x
+      - name: Build the project
+        run: npm build
+      - name: Setup Completed
+        run: echo "Setup Completed"
