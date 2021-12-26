@@ -1,4 +1,3 @@
-import { Thing } from 'button-test-lib';
 import React, { ChangeEvent, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
@@ -43,19 +42,6 @@ function App() {
           <div style={{ height: '60vh' }}>
             <h5 className='reservation-header'>Reservations</h5>
             <div className='reservation-cards-container'>
-              <Thing
-                label={'Submit'}
-                size={{ width: '10', height: '20' }}
-                type={'button'}
-                variant={{ type: 'dotted', color: 'red', border: 'none' }}
-                color={'red'}
-                bgColor={'yellow'}
-                rounded={5}
-                className='test'
-                font={{ size: 12, weight: 'bold' }}
-                onClick={(e: any) => console.log('am ddclicked', e)}
-                shadow={'5px 10px #888888'}
-              />
               {reservation.map((name: string, index: number) => (
                 <ReservationCard
                   name={name}
