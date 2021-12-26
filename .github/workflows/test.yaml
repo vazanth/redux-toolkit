@@ -9,6 +9,6 @@ jobs:
         with:
           node-version: 14.x
       - name: Build the project
-        run: npm build
+        run: npm run build
       - name: Setup Completed
         run: echo "Setup Completed"
